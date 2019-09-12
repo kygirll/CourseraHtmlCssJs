@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module2 homework</title>
+<style>
+/********** Base styles ********/
+* {
+  box-sizing: border-box;
+  font-family: 'Lucida Sans Unicode', "Lucida Grande", sans-serif;
+}
+h1 {
+  margin-bottom:25px;
+  margin-top: 25px;
+  text-align: center;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+h2 {
+  text-align: center;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  margin: 0px;
+  width: 150px;
+  overflow: auto;
+
+  float: right;
+}
+
+p {
+  width: 95%;
+  height: 180px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #000000;
+  margin-top: 50px;
+}
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+}
+
+.h2bc1 {
+  background-color: #D59898;
+}
+
+.h2bc2 {
+  background-color: #C14543;
+  color: #F5E1E1;
+}
+
+.h2bc3 {
+  background-color: #E5D198;
+}
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+    border: 2px solid black;
+    background-color: #999999; 
+  }
+  .col-lg-4 {
+    width: 30%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+
+/********** Medium devices only *********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+    background-color: #999999; 
+    border: 2px solid black;
+    }
+  .col-md-6 {
+    width: 47%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+  .col-md-12 {
+    width: 97%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 1.5%;
+  }
+}
+
+/********** Large devices only *********/
+@media (max-width: 767px) {
+.col-s-1 {
+    float: left;
+    border: 2px solid black;
+    background-color: #999999;
+  }
+
+  .col-s-1 {
+    width: 97%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 1.5%;
+  }
+}
+</style>
+</head>
+<body>
+<h1 >Our menu</h1>
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-s-1">
+    <h2 class="h2bc1">Chicken</h2>
+    <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl. It is one of the most common and widespread domestic animals, with a total population of more than 19 billion as of 2011.</p>
+  </div>
+  <div class="col-lg-4 col-md-6 col-s-1">
+    <h2 class="h2bc2">Beef</h2>
+    <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times. Beef is a source of high-quality protein and nutrients.</p>
+  </div>
+  <div class="col-lg-4 col-md-12 col-s-1">
+    <h2 class="h2bc3">Sushi</h2>
+    <p>Sushi is a Japanese dish of prepared vinegared rice, usually with some sugar and salt, accompanying a variety of ingredients, such as seafood, vegetables, and occasionally tropical fruits.</p>
+  </div>
+</div>
+
+</body>
+</html>
