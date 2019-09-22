@@ -1,0 +1,144 @@
+body {
+  font-size: 16px;
+  background-color: 000;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: #41BFB4;
+  border-radius: 0;
+  border-bottom: 2px solid #08412E;
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  color: #08412E;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #C3E7F0;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  color: #08412E;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #08412E;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */
+h1 {
+  margin-bottom:25px;
+  margin-top: 25px;
+  text-align: center;
+  color: solid black;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: solid black
+  border-right: 0px solid black;
+  border-top: 0px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 0px;
+  width: 150px;
+  float: right;
+}
+
+p {
+  width: 95%;
+  height: 180px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #000000;
+  margin-top: 50px;
+}
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+}
+
+.h2bc1 {
+  background-color: #D59898;
+  margin-right: -14px; 
+}
+
+.h2bc2 {
+  background-color: #C14543;
+  color: #F5E1E1;
+  margin-right: -14px; 
+}
+
+.h2bc3 {
+  background-color: #E5D198;
+  margin-right: -14px; 
+}
+
+.borderTexts {
+  border: 2px solid black;
+  background-color: #999999; 
+}
+
+/********** Desktop devices only **********/
+@media (min-width: 992px) {
+
+}
+
+/********** Tablet devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/********** Mobile devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { /* Restaurant name */
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+    border: 2px solid #fff;
+    margin: 5px;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  /* End Header */
+
+}

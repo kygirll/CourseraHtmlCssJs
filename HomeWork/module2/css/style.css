@@ -12,12 +12,10 @@ h2 {
   text-align: center;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
+  border-right: 0px solid black;
+  border-top: 0px solid black;
   margin: 0px;
   width: 150px;
-  overflow: auto;
-
   float: right;
 }
 
@@ -85,8 +83,8 @@ p {
   }
 }
 
-/********** Large devices only *********/
-@media (max-width: 767px) {
+/********** Small devices only *********/
+@media (max-width: 768px) {
 .col-s-1 {
     float: left;
     border: 2px solid black;
