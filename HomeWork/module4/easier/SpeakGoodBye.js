@@ -17,11 +17,11 @@
 // byeSpeaker object instead of being a standalone function.
 // See Lecture 52, part 2
 
-(function (names) {
+(function (window) {
   var byeSpeaker = {};
   var speakWord = "Good Bye ";
-  byeSpeaker.speak = function () {
-    console.log(speakWord + names);
+  byeSpeaker.speak = function (name) {
+    console.log(speakWord + name);
   }
 
   window.byeSpeaker = byeSpeaker;

@@ -14,12 +14,11 @@
 // helloSpeaker object instead of being a standalone function.
 // See Lecture 52, part 2
 
-(function (name) {
+(function (window) {
   var helloSpeaker = {};
   var speakWord = "Hello ";
-  var helloSpeaker.name = name;
-//  helloSpeaker.speak = function () {
-    console.log(speakWord + helloSpeaker.name + " !!!!!!!!!!!!!!!!");
+  helloSpeaker.speak = function (name) {
+    console.log(speakWord + name);
   }
 
   window.helloSpeaker = helloSpeaker;
