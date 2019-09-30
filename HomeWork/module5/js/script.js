@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  buildAndShowHomeHTML(randomCategoryShortName), // ***** <---- TODO: STEP 1: Substitute [...] ******
+  buildAndShowHomeHTML, // ***** <---- TODO: STEP 1: Substitute [...] ******
   true); // Explicitely setting the flag to get JSON from server processed into an object literal
 });
 // *** finish **
@@ -101,8 +101,9 @@ function buildAndShowHomeHTML (categories) {
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
-      var chosenCategoryShortName = ({{randomCategoryShortName}});
-
+      var chosenCategoryShortName = chooseRandomCategory(categories);
+      var shortName = "'" + chosenCategoryShortName.short_name + "'";
+      var categoryHtmldata;
 
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
@@ -115,9 +116,12 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       //
-      var homeHtmlToInsertIntoMainPage = ....
-
-
+      $ajaxUtils.sendGetRequest(homeHtmlUrl, function(data1) {
+        categoryHtmldata = data1;
+        console.log("category snippet" + categoryHtmldata);
+        var homeHtmlToInsertIntoMainPage = insertProperty(categoryHtmldata, "randomCategoryShortName", shortName);
+        insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
+      }, false);
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
       // of how to do that.
